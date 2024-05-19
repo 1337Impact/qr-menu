@@ -4,3 +4,10 @@ export interface Category {
   description: string;
   image: string;
 }
+
+export type CartItem = {
+  id: number;
+  name: string;
+  price: number;
+  quantity: number;
+};
