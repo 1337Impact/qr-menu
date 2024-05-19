@@ -1,4 +1,4 @@
-import CategoryCard from "./Components/CategoryCard";
+import CategoryCard from "./components/CategoryCard";
 import { Category } from "./types/types";
 import { fetchCategories } from "./utils/utils";
 

@@ -4,7 +4,7 @@ import { FaUtensils } from "react-icons/fa";
 
 const CategoryCard: React.FC<any> = ({ id, name, description, image }) => {
   return (
-    <Link href={`/category/${id}`}>
+    <Link href={`/category/${name}`}>
       <div className="rounded-lg overflow-hidden shadow-xl transition-transform transform hover:scale-105">
         <div className="relative h-32">
           <img

@@ -1,0 +1,31 @@
+import { supabase } from "@/utils/supabase";
+
+export interface Item {
+  id: number;
+  name: string;
+  price: number;
+  images: string[];
+}
+
+export default async function fetchItems(
+  categoryName: string
+): Promise<Item[] | undefined> {
+  const { data: catogory, error: err1 } = await supabase
+    .from("Category")
+    .select("id")
+    .eq("name", categoryName)
+    .single();
+  if (err1 || !catogory) {
+    console.error("Error fetching itmes:", err1);
+    return;
+  }
+  const { data, error } = await supabase
+    .from("Item")
+    .select("id, name, price, images")
+    .eq("category_id", catogory.id);
+  if (error) {
+    console.error("Error fetching itmes:", error);
+    return [];
+  }
+  return data;
+}
