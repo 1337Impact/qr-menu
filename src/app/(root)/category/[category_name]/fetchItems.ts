@@ -1,7 +1,7 @@
 import { supabase } from "@/utils/supabase";
 
 export interface Item {
-  id: number;
+  id: string;
   name: string;
   price: number;
   images: string[];
