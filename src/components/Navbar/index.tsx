@@ -30,7 +30,7 @@ export default function Navbar() {
   };
 
   return (
-    <header className="bg-gray-900 text-white py-4 px-6 flex items-center justify-between relative">
+    <header className="bg-gray-900 text-white h-[70px] px-6 flex items-center justify-between relative">
       <Link href="/">
         <img
           alt="Acme Eatery"
