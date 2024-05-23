@@ -31,14 +31,15 @@ export default async function Page({
     >
       <div className="lg:w-1/2 w-full  order-2 lg:order-1">
         <h1 className="text-3xl font-bold">{items.name}</h1>
-        <h3 className="text-xl text-gray-600  mt-2 mb-8 ">
+        <h3 className="text-xl text-gray-600  mt-2 lg:mb-4 ">
           {items.short_desc}
         </h3>
-        <div className="lg:w-1/2 w-full order-1 lg:hidden bg-red-100">
+        <div className="lg:w-1/2 w-full order-1 lg:hidden  my-4">
           <img
             src={items.images[0] ?? ""}
             alt="title"
-            className="h-60 lg:w-60 w-full shadow-2xl object-cover "
+            className="h-60 lg:w-60 w-full  object-cover  shadow-lg hover:scale-95
+            shadow-gray-500 transition-all duration-500 ease-in-out"
           />
         </div>
         <h1 className="text-2xl font-bold text-green-700">
@@ -51,7 +52,8 @@ export default async function Page({
         <img
           src={items.images[0] ?? ""}
           alt="title"
-          className="h-60 lg:w-60 w-full shadow-2xl object-cover ml-4"
+          className="h-80 lg:w-96 w-full shadow-lg hover:scale-105
+           shadow-gray-500 object-cover ml-4 transition-all duration-500 ease-in-out"
         />
       </div>
     </main>
